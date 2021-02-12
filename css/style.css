@@ -1,0 +1,386 @@
+@font-face {
+  font-family: 'Bebas';
+  src: url(../fonts/Bebas-Regular.ttf);
+}
+
+@font-face{
+  font-family: 'Helvetica Neue';
+  src: url(../fonts/HelveticaNeue-Regular.ttf);
+}
+
+:root{
+  --color: #e8603c;
+}
+
+body{
+  font-family: 'Bebas';
+}
+
+/* HEADER START */
+header{
+  text-transform: uppercase;
+}
+
+.container{
+  width: 940px;
+  margin: 0 auto;
+  border: 10px solid white;
+  border-top: none;
+  border-bottom: none;
+}
+
+.container_contant{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header_logo {
+  padding-left: 10px;
+}
+
+.menu{
+  padding-right: 10px;
+}
+
+.header_logo h1{
+  font-size: 36px;
+  color: var(--color);
+  padding-top: 28px;
+  padding-bottom: 25px;
+}
+
+.header_logo span{
+  color: #f3af9d;
+}
+
+nav li{
+  display: inline-block;
+  border-top: 5px solid transparent;
+}
+
+nav li a{
+  color: #000000;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 10px 20px 10px 12px;
+  transition: all .2s;
+}
+
+nav li a:hover{
+  color: var(--color);
+  border-top: 5px solid var(--color);
+  background-color: white;
+  height: 40px;
+  box-sizing: border-box;
+}
+
+.menu_link > a{
+  position: relative;
+}
+
+.menu_link > a::after{
+  position: absolute;
+  top: 17px;
+  right: 7px;
+  content: "";
+  background-image: url("../img/down_arrow.svg");
+  height: 5px;
+  width: 7px;
+}
+
+.drop_down_list{
+  position: absolute;
+  top: 66px;
+  border: 1px solid rgb(232, 235, 241);
+  border-top: none;
+  border-left: none;
+  border-bottom: 5px solid var(--color);
+  background-color: white;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all .3s;
+  z-index: 1;
+}
+
+.drop_down_list li{
+  display: block;
+  height: 38px;
+  border-top: 0px;
+  margin: 20px 7px 11px 7px;
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.drop_down_list li>a{
+  text-transform: none;
+}
+
+.drop_down_list li:last-child {
+  margin-bottom: 0px;
+}
+
+.drop_down_list a:hover{
+  color: var(--color);
+  border-top: none;
+}
+
+.menu_link.drop_down:hover .drop_down_list {
+  height: auto;
+  overflow: visible;
+  opacity: 1;
+}
+
+.menu_link.drop_down:hover > a{
+  color: var(--color);
+  border-top: 5px solid var(--color);
+  background-color: white;
+  height: 40px;
+  box-sizing: border-box;
+}
+
+/* HEADER FINISH */
+
+/* START SLIDERs */
+
+.sliders{
+  position: relative;
+}
+
+.sliders::before{
+  position: absolute;
+  display: inline-block;
+  content: '';
+  grid-column: 1/4;
+  width: 100%;
+  left: 0;
+  top: 0;
+  height: 50px;
+  background-color: rgba(232, 96, 60, 0.502);
+  z-index: -1;
+}
+
+.slider_big{
+  position: relative;
+  height: 400px;
+  margin-bottom: 15px;
+}
+.slider_big .slick-list,
+.slider_little .slick-list{
+  height: 100%;
+}
+
+.slick-list.draggable{
+  padding: 0 !important;
+}
+
+.slider_big .slick-track,
+.slider_little .slick-track{
+  height: 100%;
+  margin: 0;
+}
+
+.slider_big .slider_item img{
+ height: 100%;
+ width: 100%;
+}
+
+.slider_big .slider_textblok{
+  position: absolute;
+  bottom: 35px;
+  left: 35px;
+  background-color: var(--color);
+  opacity: 0.8;
+  width: 413px;
+  padding: 23px 30px 25px 20px;
+  color: white;
+}
+
+.slider_big .slider_textblok .slider_title{
+  padding-bottom: 21px;
+  font-size: 18px;
+}
+
+.slider_big .slider_textblok .slider_text{
+  font-family: 'Helvetica Neue';
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 1.3;
+}
+
+.slider_big .slick-arrow{
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  z-index: 1;
+  background: none;
+  border: none;
+}
+
+.slider_big .slider-prev{
+  left: 0;
+}
+
+.slider_big .slider-next{
+  right: 0;
+}
+
+.slider_big .slick-arrow:hover{
+  cursor: pointer;
+}
+
+.slider_little .slick-track{
+  display: flex;
+  justify-content: space-between;
+  transform: translate3d(0px, 0px, 0px) !important;
+}
+
+.slider_little .slick-track div + div{ 
+  padding-left: 20px;
+}
+
+.slider_little .slider_item img{
+  height: 120px;
+  width: 140px;
+}
+/* FINISH SLIDER */
+
+/* ___start info-bloks____ */
+.info_bloks{
+  margin-top: 40px;
+  margin-bottom: 45px;
+}
+
+.items_container {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 20px;
+}
+
+.info_item_title{
+  display: flex;
+  justify-content: center ;
+  align-items: center;
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--color);
+}
+
+.item_icon{
+  padding-right: 20px;
+}
+
+.info_item_text{
+  font-family: 'Helvetica Neue';
+  font-size: 12px;
+  line-height: 18px;
+  padding: 33px 0px 40px;
+}
+
+.info_item_link{
+  width: 60px;
+  height: 31px;
+  background-color: var(--color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+}
+
+.info_item_link a{
+  color: white;
+  text-decoration: none;
+}
+/* ___finish info-bloks____ */
+
+/* ----start section with works---- */
+.blok_with_works{
+  margin-bottom: 48px;
+}
+
+.blok_with_works .line{
+  height: 19px;
+  background-color: #c3c3c365;
+  margin-bottom: 24px;
+  position: relative;
+}
+
+.blok_with_works .line::before{
+  display: block;
+  position: absolute;
+  top: 0;
+  content: 'recent works';
+  background-color: white;
+  height: 100%;
+  width: 135px;
+  font-size: 18px;
+  color: var(--color);
+}
+
+.blok_with_works .bloks{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bloks .blok img{
+  max-width: 219px ;
+  max-height: 184px;
+}
+
+.blok .text{
+  border: 1px solid rgb(219, 219, 219);
+  border-top: none;
+  padding: 13px 0px 14px 15px;
+  color: #b9b9b9;
+  font-size: 16px;
+  margin-top: -2px;
+}
+
+.data{
+  color: var(--color);
+  font-size: 11px;
+  padding-top: 8px;
+}
+/* ----end_section_with_works---- */
+
+/*-------start_footer------*/
+footer{
+  background-color: rgba(232, 96, 60, 0.502);
+}
+
+.container.footer{
+  background-color: var(--color);
+  display: flex;
+  justify-content: space-between;
+  padding: 42px 42px 33px 34px ;
+  color: white;
+  font-family: 'Helvetica Neue';
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.footer_item_tittle{
+  font-family: 'Bebas';
+  font-size: 20px;
+}
+
+.footer_item_txt{
+  padding-top: 28px;
+  max-width: 260px;
+}
+
+.footer_item_txt p{
+  padding: 9px 0px 19px 0px;
+}
+
+.footer_item_txt a{
+  color: rgb(243, 178, 157);
+  text-decoration: none;
+}
+
+.social_media ul li{
+  display: inline-block;
+}
+
+/*---------end_footer------- */
