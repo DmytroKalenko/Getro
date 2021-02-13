@@ -1,0 +1,57 @@
+:root{
+    --color: #e8603c;
+  }
+@media (max-width: 1280px){
+    .menu ul{
+        display: none;
+    }
+    .burger_menu{
+        display: block;
+    }
+
+    .menu{
+        position: absolute;
+        top: 87px;
+        left: 0;
+        width: 100%;
+        z-index: 2;
+        background-color: white;
+        border-bottom: 1px solid var(--color);
+    }
+
+    nav li{
+        display: block;
+        position: relative;
+        height: 40px;
+        border: none;
+
+    }
+
+    .menu_link > a{
+        position: absolute;
+    }
+
+    nav li a{
+        position: absolute;
+        width: 100%;
+        text-align: center;
+    }
+    
+    nav li a:hover{
+        border: none;
+    }
+    .drop_down_list li{
+        margin: 0;
+        
+    }
+    .drop_down_list{
+        position: relative;
+        top: 20px;
+        background-color: thistle;
+    }
+
+    .menu_link.drop_down:hover > a{
+        border: none;
+       
+    }
+}

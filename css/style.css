@@ -384,3 +384,18 @@ footer{
 }
 
 /*---------end_footer------- */
+
+
+/* burger menu  */
+
+.burger_menu{
+  display: none;
+  width: 30px;
+}
+
+.burger_menu_row{
+  height: 4px;
+  width: 100%;
+  background-color: black;
+  margin-bottom: 6px;
+}

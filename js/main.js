@@ -15,7 +15,11 @@ $(function(){
         asNavFor: '.slider_big',
         centerMode: true,
         focusOnSelect: true
-      });
+    });
+
+    $('.burger_menu').on('click', function(){
+        $('.menu ul').slideToggle();
+    });
 
 });
 
