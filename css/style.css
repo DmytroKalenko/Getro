@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 @font-face {
   font-family: 'Bebas';
   src: url(../fonts/Bebas-Regular.ttf);
@@ -30,9 +37,15 @@ header{
 }
 
 .container_contant{
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .header_logo {
@@ -64,6 +77,8 @@ nav li a{
   text-decoration: none;
   font-size: 16px;
   padding: 10px 20px 10px 12px;
+  -webkit-transition: all .2s;
+  -o-transition: all .2s;
   transition: all .2s;
 }
 
@@ -72,7 +87,8 @@ nav li a:hover{
   border-top: 5px solid var(--color);
   background-color: white;
   height: 40px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .menu_link > a{
@@ -100,6 +116,8 @@ nav li a:hover{
   height: 0;
   overflow: hidden;
   opacity: 0;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
   transition: all .3s;
   z-index: 1;
 }
@@ -136,7 +154,8 @@ nav li a:hover{
   border-top: 5px solid var(--color);
   background-color: white;
   height: 40px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 /* HEADER FINISH */
@@ -151,6 +170,8 @@ nav li a:hover{
   position: absolute;
   display: inline-block;
   content: '';
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
   grid-column: 1/4;
   width: 100%;
   left: 0;
@@ -211,7 +232,9 @@ nav li a:hover{
 .slider_big .slick-arrow{
   position: absolute;
   top: 50%;
-  transform: translate(0, -50%);
+  -webkit-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+          transform: translate(0, -50%);
   z-index: 1;
   background: none;
   border: none;
@@ -230,8 +253,12 @@ nav li a:hover{
 }
 
 .slider_little .slick-track{
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .slider_little .slick-track div + div{ 
@@ -251,15 +278,27 @@ nav li a:hover{
 }
 
 .items_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  column-gap: 20px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-column-gap: 20px;
+     -moz-column-gap: 20px;
+          column-gap: 20px;
 }
 
 .info_item_title{
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center ;
-  align-items: center;
+  -webkit-box-pack: center ;
+      -ms-flex-pack: center ;
+          justify-content: center ;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: 18px;
   line-height: 24px;
   color: var(--color);
@@ -280,9 +319,15 @@ nav li a:hover{
   width: 60px;
   height: 31px;
   background-color: var(--color);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: 12px;
 }
 
@@ -317,9 +362,15 @@ nav li a:hover{
 }
 
 .blok_with_works .bloks{
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .bloks .blok img{
@@ -350,8 +401,12 @@ footer{
 
 .container.footer{
   background-color: var(--color);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 42px 42px 33px 34px ;
   color: white;
   font-family: 'Helvetica Neue';
