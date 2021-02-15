@@ -293,7 +293,9 @@ nav li a:hover{
         position: relative;
         top: 68px;
     }
-
+    nav ul{
+        top: 60px;
+    }
     .container,
     .container_contant{
         height: 100%;
