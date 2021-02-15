@@ -234,7 +234,7 @@ nav li a:hover{
         padding-top: 20px ;
     }   
 }
-@media (max-width 415){
+@media (max-width: 415px){
     .sliders,
     .info_bloks,
     .blok_with_works,
@@ -255,7 +255,7 @@ nav li a:hover{
         position: relative;
         top: 68px;
     }
-}
+
     .container,
     .container_contant{
         height: 100%;
