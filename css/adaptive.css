@@ -287,4 +287,7 @@ nav li a:hover{
         border-right: none;
         width: 100% !important;
     }
+    .slider_little .slider_item {
+        height: 85px;
+    }
 }
