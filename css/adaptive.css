@@ -208,7 +208,7 @@ nav li a:hover{
 
 @media (max-width: 400px){
     .slider_big {
-        height: 180px;
+        height: 160px;
     }
     .slick-arrow img {
         height: 15px;
@@ -223,7 +223,7 @@ nav li a:hover{
         font-size: 8px;
     }
     .slider_little .slider_item {
-        height: 100px;
+        height: 95px;
     }
     .slider_big .slider_textblok .slider_title {
         padding-bottom: 6px;
