@@ -251,9 +251,11 @@ nav li a:hover{
 }
 
 .items_container {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   justify-content: space-between;
-  column-gap: 20px;
+  grid-gap: 20px;
+  
 }
 
 .info_item_title{
@@ -317,8 +319,9 @@ nav li a:hover{
 }
 
 .blok_with_works .bloks{
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
   align-items: center;
 }
 
@@ -350,7 +353,9 @@ footer{
 
 .container.footer{
   background-color: var(--color);
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 30px;
   justify-content: space-between;
   padding: 42px 42px 33px 34px ;
   color: white;
