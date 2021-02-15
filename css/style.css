@@ -7,6 +7,9 @@
   font-family: 'Helvetica Neue';
   src: url(../fonts/HelveticaNeue-Regular.ttf);
 }
+*{
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
 
 :root{
   --color: #e8603c;

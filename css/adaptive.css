@@ -61,8 +61,6 @@
 
     .items_container{
         grid-template-columns: 1fr;
-    
-
     }
 
     .info_item{
@@ -86,7 +84,7 @@
     }
 
 .burger_menu{
-    display: block;   
+    display: inline-block;   
 }
 
 nav li{
@@ -98,11 +96,11 @@ nav li{
 
 nav ul{
     position: absolute;
-    top: 80px;
+    top: 88px;
     left: 0;
     width: 100%;
     z-index: 2;
-    background-color: rgb(249, 253, 7);
+    background-color: rgb(255, 255, 255);
 }
 
 nav a{
@@ -111,7 +109,47 @@ nav a{
 
 nav li a:hover{
     border-top: none;
+    height: auto;
+    background-color: transparent;
 }
+
+
+.header_logo{
+    display: inline-block;
+}
+.menu{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.drop_down_list {
+    height: auto;
+    overflow: visible;
+    opacity: 1;
+    display: none;
+    top: 40px;
+}
+.drop_down_list li{
+    margin: 0;
+    height: 100%;
+}
+.drop_down_list.active{
+    display: block;
+    background-color: rgb(236, 234, 234);
+}
+
+
+.menu_link.drop_down:hover > a{
+    border-top: none;
+    background-color: rgb(236, 234, 234);
+}
+
+.menu_link.drop_down{
+    position: relative;
+}
+
+
 }
 
 @media (max-width: 780px){
