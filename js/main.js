@@ -17,9 +17,14 @@ $(function(){
         focusOnSelect: true
     });
 
-    $('.burger_menu').on('click', function(){
-        $('.menu ul').slideToggle();
+
+
+    $('.menu_link.drop_down').on('click', function(){
+        $(this).children('.drop_down_list').toggleClass('active');
     });
+
+   
+
 
 });
 

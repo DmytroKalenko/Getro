@@ -2,56 +2,36 @@
     --color: #e8603c;
   }
 @media (max-width: 1280px){
-    .menu ul{
-        display: none;
+    nav{
+        display: block;
+
     }
     .burger_menu{
         display: block;
+        
     }
-
-    .menu{
+    
+    nav li{
+        display: block;
+        text-align: center;
+        border-top: none;
+        height: 40px;
+    }
+    
+    nav ul{
         position: absolute;
-        top: 87px;
+        top: 80px;
         left: 0;
         width: 100%;
         z-index: 2;
-        background-color: white;
-        border-bottom: 1px solid var(--color);
+        background-color: rgb(249, 253, 7);
     }
 
-    nav li{
+    nav a{
         display: block;
-        position: relative;
-        height: 40px;
-        border: none;
-
     }
 
-    .menu_link > a{
-        position: absolute;
-    }
-
-    nav li a{
-        position: absolute;
-        width: 100%;
-        text-align: center;
-    }
-    
     nav li a:hover{
-        border: none;
-    }
-    .drop_down_list li{
-        margin: 0;
-        
-    }
-    .drop_down_list{
-        position: relative;
-        top: 20px;
-        background-color: thistle;
-    }
-
-    .menu_link.drop_down:hover > a{
-        border: none;
-       
+        border-top: none;
     }
 }
