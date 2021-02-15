@@ -232,7 +232,6 @@ nav li a:hover{
 .slider_little .slick-track{
   display: flex;
   justify-content: space-between;
-  transform: translate3d(0px, 0px, 0px) !important;
 }
 
 .slider_little .slick-track div + div{ 
@@ -367,7 +366,7 @@ footer{
 
 .footer_item_txt{
   padding-top: 28px;
-  max-width: 260px;
+  width: 260px;
 }
 
 .footer_item_txt p{

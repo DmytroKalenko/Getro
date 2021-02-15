@@ -10,14 +10,37 @@ $(function(){
     });
 
     $('.slider_little').slick({
+        autoplay: false,
         slidesToShow: 6,
         slidesToScroll: 1,
+        arrows: false,
         asNavFor: '.slider_big',
         centerMode: true,
-        focusOnSelect: true
+        focusOnSelect: true,
+        responsive: [
+            {
+              breakpoint: 1281,
+              settings: {
+                slidesToShow: 5,
+                centerMode: true,
+                slidesToScroll: 1,
+              }
+            },
+            {
+              breakpoint: 491,
+              settings: {
+                arrows: false,
+                centerMode: true,
+                centerPadding: '40px',
+                slidesToShow: 3
+              }
+            }
+          ]
     });
 
-
+    $('.burger_menu').on('click', function(){
+        $('.menu').slideToggle();
+    });
 
     $('.menu_link.drop_down').on('click', function(){
         $(this).children('.drop_down_list').toggleClass('active');
