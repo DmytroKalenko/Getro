@@ -1,0 +1,228 @@
+@font-face {
+  font-family: 'Bebas';
+  src: url(../fonts/Bebas-Regular.ttf);
+}
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url(../fonts/HelveticaNeue-Regular.ttf);
+}
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Bebas';
+}
+
+.container {
+  width: 940px;
+  margin: 0 auto;
+  border: 10px solid white;
+  border-top: none;
+  border-bottom: none;
+  position: relative;
+}
+
+header {
+  text-transform: uppercase;
+}
+header .container_contant {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .container_contant .header_logo {
+  padding-left: 10px;
+  display: inline-block;
+}
+header .container_contant .header_logo h1 {
+  font-size: 36px;
+  color: var(--color);
+  padding-top: 28px;
+  padding-bottom: 25px;
+}
+header .container_contant .header_logo span {
+  color: #f3af9d;
+}
+header .container_contant .burger_menu {
+  display: none;
+  width: 30px;
+}
+header .container_contant .burger_menu .burger_menu_row {
+  height: 4px;
+  width: 100%;
+  background-color: black;
+  margin-bottom: 6px;
+}
+header .container_contant .menu ul {
+  display: flex;
+  justify-content: space-between;
+}
+header .container_contant .menu ul li {
+  position: relative;
+}
+header .container_contant .menu ul li a {
+  color: #000000;
+  text-decoration: none;
+  font-size: 16px;
+  transition: all .2s;
+  width: 100%;
+  padding: 10px 20px;
+}
+header .container_contant .menu ul li a:hover {
+  color: #e8603c;
+  border-top: 5px solid #e8603c;
+  background-color: white;
+}
+header .container_contant .menu ul .menu_link.drop_down > a::after {
+  content: '';
+  position: absolute;
+  top: 5px;
+  right: 4px;
+  background-image: url("../img/down_arrow.svg");
+  height: 5px;
+  width: 7px;
+  transition: all 0.3s;
+}
+header .container_contant .menu ul .menu_link.drop_down.active > a {
+  border-top: 5px solid #e8603c;
+}
+header .container_contant .menu ul .menu_link.drop_down.active > a::after {
+  transform: rotate(-180deg);
+}
+header .container_contant .menu ul .menu_link.drop_down .drop_down_list {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 20px;
+  left: 0;
+  border: 1px solid #e8ebf1;
+  border-top: none;
+  border-left: none;
+  border-bottom: 5px solid #e8603c;
+  background-color: white;
+  transition: all .3s;
+  z-index: 1;
+  min-width: 191px;
+}
+header .container_contant .menu ul .menu_link.drop_down .drop_down_list.active {
+  display: flex;
+}
+header .container_contant .menu ul .menu_link.drop_down .drop_down_list li {
+  display: inline-block;
+  border-bottom: 1px solid #e7e7e7;
+  border-top: none;
+  padding: 10px 20px;
+}
+header .container_contant .menu ul .menu_link.drop_down .drop_down_list li a {
+  padding: 0px;
+}
+header .container_contant .menu ul .menu_link.drop_down .drop_down_list li a:hover {
+  border-top: none;
+}
+
+.title_page {
+  background-color: #f3af9d;
+  height: 61px;
+  margin-bottom: 20px;
+}
+.title_page .container {
+  display: flex;
+  align-items: center;
+  background-color: #e8603c;
+  height: 100%;
+  font-family: 'Bebas';
+  font-size: 24px;
+  padding-left: 15px;
+  color: white;
+}
+
+.info_bloks .container {
+  font-family: 'Helvetica Neue';
+  line-height: 1.2;
+  text-align: justify;
+  margin-bottom: 20px;
+}
+.info_bloks .container img {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.blok_with_works {
+  margin-bottom: 48px;
+}
+.blok_with_works .line {
+  height: 19px;
+  background-color: #c3c3c365;
+  margin-bottom: 24px;
+  position: relative;
+}
+.blok_with_works .line::before {
+  display: block;
+  position: absolute;
+  top: 0;
+  content: 'recent works';
+  background-color: white;
+  height: 100%;
+  width: 135px;
+  font-size: 18px;
+  color: var(--color);
+}
+.blok_with_works .bloks {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  align-items: center;
+}
+.blok_with_works .bloks .blok img {
+  max-width: 219px;
+  max-height: 184px;
+}
+.blok_with_works .bloks .blok .text {
+  border: 1px solid #dbdbdb;
+  border-top: none;
+  padding: 13px 0px 14px 15px;
+  color: #b9b9b9;
+  font-size: 16px;
+  margin-top: -2px;
+}
+.blok_with_works .bloks .blok .text .data {
+  color: var(--color);
+  font-size: 11px;
+  padding-top: 8px;
+}
+
+footer {
+  background-color: rgba(232, 96, 60, 0.502);
+}
+footer .container.footer {
+  background-color: var(--color);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 30px;
+  justify-content: space-between;
+  padding: 42px 42px 33px 34px;
+  color: white;
+  font-family: 'Helvetica Neue';
+  font-size: 12px;
+  line-height: 14px;
+}
+footer .container.footer .footer_item_tittle {
+  font-family: 'Bebas';
+  font-size: 20px;
+}
+footer .container.footer .footer_item_txt {
+  padding-top: 28px;
+  width: 260px;
+}
+footer .container.footer .footer_item_txt p {
+  padding: 9px 0px 19px 0px;
+}
+footer .container.footer .footer_item_txt a {
+  color: #f3b29d;
+  text-decoration: none;
+}
+footer .container.footer .social_media ul li {
+  display: inline-block;
+}

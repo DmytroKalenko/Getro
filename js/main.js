@@ -42,11 +42,14 @@ $(function(){
         $('.menu').slideToggle();
     });
 
+  
     $('.menu_link.drop_down').on('click', function(){
         $(this).children('.drop_down_list').toggleClass('active');
+        $('.menu_link.drop_down').toggleClass('active');
     });
-
    
+
+    
 
 
 });
